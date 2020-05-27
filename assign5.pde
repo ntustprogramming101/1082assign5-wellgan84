@@ -586,26 +586,12 @@ color getTimeTextColor(int frames){				// Requirement #5
   }
 }
 
+/*
 int getEnemyIndexByRow(int row){				// Requirement #6
 		// HINT:
 		// - If there's a soldier in that row, return that soldier's index in soldierX/soldierY
 		// (for example, if soldierY[3] is in that row, return 3)
 		// - Return -1 if there's no soldier in that row
-
-  for (int i = 0; i < soldierX.length; i++){
-    
-  /*
-    if (soldierY[i] == float ((row+5) * SOIL_SIZE)) {
-      return i; 
-    } else {
-      return -1;
-    }
-  }
-  */
-  
-  /*
-  return soldierY.index( (row+5)*SOIL_SIZE );
-  */
   return -1;
 }
 
@@ -618,6 +604,7 @@ void drawCaution(){								// Requirement #6
 		// - Don't draw anything if int getEnemyIndexByRow(int row) returns -1
   
 }
+*/
 
 void keyPressed(){
 	if(key==CODED){
