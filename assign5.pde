@@ -298,7 +298,7 @@ void draw() {
 			image(cabbage, cabbageX[i], cabbageY[i]);
 
 			// Requirement #3: Use boolean isHit(...) to detect collision
-      if ( isHit(cabbageX[i],cabbageY[i],SOIL_SIZE,SOIL_SIZE,playerX,playerY,SOIL_SIZE,SOIL_SIZE) ){
+      if (playerHealth < PLAYER_MAX_HEALTH && isHit(cabbageX[i],cabbageY[i],SOIL_SIZE,SOIL_SIZE,playerX,playerY,SOIL_SIZE,SOIL_SIZE) ){
         playerHealth ++;
         cabbageX[i] = cabbageY[i] = -1000;
       }
