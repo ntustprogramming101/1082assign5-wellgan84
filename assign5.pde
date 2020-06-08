@@ -461,6 +461,7 @@ void draw() {
 
 		// Requirement #6:
 		//   Call drawCaution() to draw caution sign
+    drawCaution();
 
 		popMatrix();
 
@@ -586,14 +587,22 @@ color getTimeTextColor(int frames){				// Requirement #5
   }
 }
 
-/*
+
+
 int getEnemyIndexByRow(int row){				// Requirement #6
 		// HINT:
 		// - If there's a soldier in that row, return that soldier's index in soldierX/soldierY
 		// (for example, if soldierY[3] is in that row, return 3)
 		// - Return -1 if there's no soldier in that row
+
+  for(int i = 0; i < soldierX.length; i++){
+    if(soldierY[i]/SOIL_SIZE == row){
+      return i;
+    }
+  }
   return -1;
 }
+
 
 void drawCaution(){								// Requirement #6
 
@@ -602,9 +611,11 @@ void drawCaution(){								// Requirement #6
 		// - Use playerRow to calculate the row below the screen
 		// - Use the returned value from int getEnemyIndexByRow(int row) to get the soldier's position from soldierX/soldierY arrays
 		// - Don't draw anything if int getEnemyIndexByRow(int row) returns -1
-  
+  if(getEnemyIndexByRow(playerRow+5) != -1){
+    image(caution,soldierX[getEnemyIndexByRow(playerRow+5)],soldierY[getEnemyIndexByRow(playerRow+5)]-SOIL_SIZE);
+  }
 }
-*/
+
 
 void keyPressed(){
 	if(key==CODED){
